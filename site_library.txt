@@ -1,5 +1,9 @@
-tiktok.com | Social media app popular among teens, contains potentially inappropriate content.
-reddit.com | Community forums where users post content. May include adult material.
-omegle.com | Anonymous video chat site, often unmoderated.
-discord.com | Voice and text chat platform, common in gaming and community groups.
-roblox.com | Online game platform that includes user-generated games and chat.
+youtube.com| Video sharing platform popular with all ages.
+tiktok.com| Social media app popular among teens, contains potentially inappropriate content.
+reddit.com| Community forums where users post content. May include adult material.
+discord.com| Chat app for gaming and communities. Some channels may not be moderated.
+roblox.com| Gaming platform with user-generated content. Includes chat features.
+omegle.com| Anonymous video chat site, often unmoderated and unsafe for kids.
+facebook.com| Social networking platform. Can expose kids to public profiles and messages.
+snapchat.com| Messaging app with disappearing content, often used for private chats.
+instagram.com| Photo and video sharing platform. Common among teens.

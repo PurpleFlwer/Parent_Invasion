@@ -14,6 +14,11 @@ public:
     void loadApprovedSites(const std::string& filename);
     void loadSiteDescriptions(const std::string& filename);
     void checkVisitedSite(const std::string& site);
+
+    // This method lets main.cpp access the approvedSites list
+    std::vector<std::string> getApprovedSites() const {
+        return approvedSites;
+    }
 };
 
 #endif
