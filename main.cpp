@@ -25,7 +25,13 @@ int main() {
     std::map<std::string, std::string> siteLibrary;
 
     wm.loadApprovedSites("approved_sites.txt");
-    siteLibrary = loadSiteLibrary("site_descriptions.txt");
+    siteLibrary = loadSiteLibrary("site_library.txt");
+
+    std::ofstream logFile("visited_log.txt", std::ios::app); // open for appending
+    if (!logFile) {
+        std::cout << "Could not open log file." << std::endl;
+        return 1;
+    }
 
     int choice;
     std::string input;
@@ -48,7 +54,27 @@ int main() {
                 std::cout << "🔍 Enter visited website: ";
                 std::getline(std::cin, input);
                 if (input == "exit") break;
-                wm.checkVisitedSite(input);
+
+                bool approved = false;
+                for (const auto& site : wm.getApprovedSites()) {
+                    if (site == input) {
+                        approved = true;
+                        break;
+                    }
+                }
+
+                if (!approved) {
+                    std::cout << "[ALERT] Unapproved site visited: " << input << "\n";
+                    if (siteLibrary.count(input)) {
+                        std::cout << "→ Description: " << siteLibrary[input] << "\n";
+                    } else {
+                        std::cout << "→ No description available.\n";
+                    }
+                    logFile << input << " - ALERT: Unapproved\n";
+                } else {
+                    std::cout << "[OK] Approved site: " << input << "\n";
+                    logFile << input << " - OK: Approved\n";
+                }
                 std::cout << "\n";
             }
         } else if (choice == 2) {
@@ -72,5 +98,6 @@ int main() {
         }
     }
 
+    logFile.close();
     return 0;
 }
