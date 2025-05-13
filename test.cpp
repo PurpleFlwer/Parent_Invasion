@@ -1,3 +1,6 @@
+// This test suite verifies key functions in the WebsiteMonitor class.
+// It checks whether sites are loaded correctly and responses are generated properly.
+
 #include <iostream>
 #include <vector>
 #include <string>

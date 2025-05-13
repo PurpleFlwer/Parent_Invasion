@@ -1,3 +1,8 @@
+//Programmer:Daisy Banas
+// Class:COMPSCI2
+//  This C++ program allows parents to monitor websites visited by their kids.
+// It uses file I/O, a menu system, logging, and a site info lookup.
+
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -112,7 +117,7 @@ int main() {
                 }
             }
         } else if (choice == 3) {
-            std::cout << "Goodbye, chica!\n";
+            std::cout << "Goodbye\n";
             break;
         } else if (choice == 4) {
             std::cout << "\n===== Website Visit Log =====\n";
